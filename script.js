@@ -1,5 +1,5 @@
 import { catsData } from './data.js'
-
+// Declaring variables 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
 const gifsOnlyOption = document.getElementById('gifs-only-option')
@@ -7,12 +7,12 @@ const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const closeBtn = document.getElementById('meme-modal-close-btn')
 
-
+// Event Listeners
 emotionRadios.addEventListener('change', highlightCheckedOption)
 closeBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
 
-
+// Functions
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
     for (let element of radios){
@@ -93,5 +93,5 @@ function renderEmotionsRadios(cats){
     }
     emotionRadios.innerHTML = radioItems
 }
-
+// calling 
 renderEmotionsRadios(catsData)
