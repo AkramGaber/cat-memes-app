@@ -13,7 +13,7 @@ closeBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
 document.addEventListener('click', function(e){
     if(!memeModal.contains(e.target) && e.target !== getImageBtn){
-        closeModal
+        closeModal()
     }
 })
 
