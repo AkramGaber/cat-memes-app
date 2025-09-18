@@ -11,6 +11,11 @@ const closeBtn = document.getElementById('meme-modal-close-btn')
 emotionRadios.addEventListener('change', highlightCheckedOption)
 closeBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
+document.addEventListener('click', function(e){
+    if(!memeModal.contains(e.target) && e.target !== getImageBtn){
+        closeModal
+    }
+})
 
 // Functions
 function highlightCheckedOption(e){
